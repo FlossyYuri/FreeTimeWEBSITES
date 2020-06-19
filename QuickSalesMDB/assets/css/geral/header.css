@@ -1,0 +1,115 @@
+.cabecalho .user{
+  font-size: 1.2rem;
+}
+
+.cabecalho .main-menu{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.cabecalho .user li a img{
+  max-width: 100px;
+}
+
+.cabecalho .user ul li{
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.cabecalho .user ul li:last-child{
+  margin-right: 0px;
+}
+.cabecalho .user ul li i{
+  font-size: 1.5rem;
+  margin-right: 5px; 
+}
+
+.sidenav .user-view .background img{
+  width: 100%;
+}
+
+.sidenav .user-view .circle{
+  box-shadow: 4px 4px 5px #00000088;
+
+}
+.cabecalho .search-bar{
+  padding-bottom: 10px;
+}
+
+.cabecalho .main-menu nav input{
+  border-radius: 5px;
+  transition: all 200ms ease-in;
+}
+.cabecalho .main-menu nav{
+  border-radius: 5px;
+  transition: all 200ms ease-in;
+}
+
+.cabecalho .main-menu nav:focus{
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  transition: all 200ms ease-in;
+}
+
+.cabecalho .main-menu nav input:focus{
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  transition: all 200ms ease-in;
+}
+
+.cabecalho .menu .categoria{
+  display: block;
+}
+
+.cabecalho .menu{
+  height: auto;
+}
+
+.cabecalho .med-menu li{
+  display: inline-block;
+}
+
+.cabecalho .site-logo,.site-link{
+  width: 2rem;
+}
+
+.cabecalho .categorias li i{
+  margin-right: 5px;
+}
+.cabecalho .bottom-menu{
+  z-index: 2;
+  position: fixed;
+  bottom: 0;
+  height: auto;
+  text-align: center;
+}
+
+.cabecalho .bottom-menu ul{
+  justify-content: center;
+}
+.cabecalho .bottom-menu a i{
+  font-size: 2rem;
+  line-height: 35px;
+  height: 40px;
+}
+.cabecalho .bottom-menu a{
+  line-height: 0rem;
+  font-size: .85rem;
+  height: 50px;
+  padding: 0;
+}
+.cabecalho .bottom-menu img{
+  font-size: 2rem;
+  line-height: 40px;
+  height: 40px;
+  padding: 4px;
+  padding-left: 2px;
+}
+
+.cabecalho .user .dropdown-content{
+  width: 200px !important;;
+}
+
+.cabecalho .user .dropdown-content li{
+  display: block;
+}

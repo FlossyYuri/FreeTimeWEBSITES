@@ -1,0 +1,9 @@
+.desejos .thead-dark *{
+    border: none;
+    outline: none;
+    border-radius: 0;
+}
+
+.desejos tbody td img{
+    width: 100px;
+}

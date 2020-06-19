@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Site configs  -->
+    <link rel="shortcut icon" href="assets/ai/quick mini red.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/ai/quick mini red.png">
+    <title>Quicksales</title>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"
+    />
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- Material Design Bootstrap -->
+    <link rel="stylesheet" href="css/mdb.min.css" />
+    <!-- Your custom styles (optional) -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!--Main Navigation-->
+    <header>
+      <div class="container-xl top-bar d-none d-lg-block">
+        <div class="row my-2">
+          <div class="col-md-7">
+            <ul>
+              <li>
+                <img style="height: 35px;" src="assets/ai/quick.png" alt="" />
+              </li>
+              <li>
+                <a class="btn btn-outline-main waves-effect d-flex"
+                  ><i class="fas fa-list-ul"></i> Meus anúncios</a
+                >
+              </li>
+              <li>
+                <a class="btn bg-main d-flex"
+                  ><i class="fas fa-plus left"></i> Anunciar</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-5">
+            <ul class="d-flex justify-content-end">
+              <li>
+                <a class="btn btn-outline-main waves-effect d-flex"
+                  ><i class="far fa-heart"></i> Desejos</a
+                >
+              </li>
+              <li class="">
+                <a class="btn btn-outline-main waves-effect d-flex"
+                  ><i class="far fa-user-circle"></i> Conta</a
+                >
+              </li>
+              <li>
+                <a class="btn btn-outline-main waves-effect d-flex"
+                  ><i class="far fa-user-circle"></i>
+                  Entrar/Registrar
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-main">
+        <div class="container-xl flex-column">
+          <!-- Large outline input -->
+          <div class="col-sm-12 p-0">
+            <!-- Material background input -->
+            <div class="md-form md-bg m-1 z-depth-1">
+              <input
+                type="text"
+                id="pesquisa"
+                placeholder="Pesquisar"
+                class="form-control"
+              />
+            </div>
+          </div>
+          <div class="col-sm 12 p-0 categorias d-none d-lg-block">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#"
+                    ><i class="fas fa-caret-right"></i> Todas Categorias</a
+                  >
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="#"
+                    ><i class="fa fa-mobile"></i
+                    ><span> Artigos Eletrônicos</span></a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"
+                    ><i class="fas fa-tv"></i><span> Eletrodoméstico</span></a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!--Main Navigation-->
+
+    <!--Main Layout-->
+    <main class="py-2">
+      <div class="container-xl">
+        <div class="row filter-bar mb-3">
+          <div class="col-sm-12 d-flex justify-content-around d-lg-none">
+            <a
+              id="recent"
+              class="btn btn-outline-main waves-effect btn-filtro px-4"
+              ><span>Filtros</span><i class="fas fa-filter"></i
+            ></a>
+            <a
+              id="recent"
+              class="btn btn-outline-main waves-effect btn-filtro px-4"
+              ><span>Listagem</span><i class="fas fa-th-list"></i
+            ></a>
+          </div>
+
+          <div class="col-sm-8 align-items-center d-none d-lg-flex">
+            <ul class="list-unstyled d-flex align-items-center">
+              <li><span>Ordenar por:</span></li>
+              <li>
+                <a
+                  id="recent"
+                  class="btn btn-outline-main waves-effect z-depth-0 btn-filtro"
+                  ><span>Recentes</span><i class="far fa-star right"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  id="views"
+                  class="btn btn-outline-main waves-effect z-depth-0 btn-filtro"
+                  ><span>Mais vistos</span><i class="fab fa-hotjar right"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  id="preco"
+                  class="btn btn-outline-main waves-effect z-depth-0 btn-filtro"
+                  ><span>Preço</span
+                  ><i class="fas fa-sort-numeric-down right"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  id="listagem"
+                  class="btn btn-outline-main waves-effect z-depth-0 btn-list"
+                  ><span>Listagem</span><i class="fas fa-th-list right"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-sm-4 d-none d-lg-flex">
+            <div class="md-form mr-4 my-2">
+              <input
+                id="preco-min"
+                type="number"
+                min="0"
+                class="form-control"
+              />
+              <label for="preco-min">Min</label>
+            </div>
+            <div class="md-form my-2">
+              <input
+                id="preco-max"
+                type="number"
+                min="0"
+                class="form-control"
+              />
+              <label for="preco-max">Max</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card Panel -->
+        <section class="card-panel mb-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title text-main mb-4">
+                <div class="circle d-inline-block mr-2">
+                  <i class="far fa-clock"></i>
+                </div>
+                Panel title
+              </h5>
+              <div class="row">
+                <!-- Card -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                  <div class="card card-vertical z-depth-0">
+                    <!-- Card image -->
+                    <div class="view overlay">
+                      <a href=""
+                        ><img
+                          class="card-img-top"
+                          src="https://mdbootstrap.com/img/Photos/Others/food.jpg"
+                          alt="Card image cap"
+                      /></a>
+                      <a>
+                        <div class="mask rgba-white-slight"></div>
+                      </a>
+                    </div>
+
+                    <!-- Button -->
+                    <a class="btn-floating btn-action ml-auto mr-4 orange"
+                      ><i class="far fa-heart"></i
+                    ></a>
+
+                    <!-- Card content -->
+                    <div class="card-body p-4">
+                      <!-- Title -->
+                      <h4 class="card-title">Card title</h4>
+                      <hr class="my-2" />
+                      <!-- Text -->
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                    </div>
+
+                    <!-- Card footer -->
+                    <div class="rounded-bottom rgba-blue-grey-slight p-4">
+                      <ul class="list-unstyled">
+                        <li class="price-item">
+                          <a href="#">1,000,000.00 MZN</a>
+                        </li>
+                        <li class="location-item">
+                          <span class="blue-grey-text">Magoanine, Maputo</span>
+                        </li>
+                        <li class="user-item">
+                          <span class="black-text">Giroflex</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!-- Card -->
+                
+                <!-- Card -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                  <div class="card card-vertical z-depth-0">
+                    <!-- Card image -->
+                    <div class="view overlay">
+                      <a href=""
+                        ><img
+                          class="card-img-top"
+                          src="https://mdbootstrap.com/img/Photos/Others/food.jpg"
+                          alt="Card image cap"
+                      /></a>
+                      <a>
+                        <div class="mask rgba-white-slight"></div>
+                      </a>
+                    </div>
+
+                    <!-- Button -->
+                    <a class="btn-floating btn-action ml-auto mr-4 orange"
+                      ><i class="far fa-heart"></i
+                    ></a>
+
+                    <!-- Card content -->
+                    <div class="card-body p-4">
+                      <!-- Title -->
+                      <h4 class="card-title">Card title</h4>
+                      <hr class="my-2" />
+                      <!-- Text -->
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                    </div>
+
+                    <!-- Card footer -->
+                    <div class="rounded-bottom rgba-blue-grey-slight p-4">
+                      <ul class="list-unstyled">
+                        <li class="price-item">
+                          <a href="#">1,000,000.00 MZN</a>
+                        </li>
+                        <li class="location-item">
+                          <span class="blue-grey-text">Magoanine, Maputo</span>
+                        </li>
+                        <li class="user-item">
+                          <span class="black-text">Giroflex</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- Card -->
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                  <!-- Card -->
+                  <div class="card card-vertical z-depth-0">
+                    <!-- Card image -->
+                    <div class="view overlay">
+                      <a href=""
+                        ><img
+                          class="card-img-top"
+                          src="https://mdbootstrap.com/img/Photos/Others/food.jpg"
+                          alt="Card image cap"
+                      /></a>
+                      <a>
+                        <div class="mask rgba-white-slight"></div>
+                      </a>
+                    </div>
+
+                    <!-- Button -->
+                    <a class="btn-floating btn-action ml-auto mr-4 orange"
+                      ><i class="far fa-heart"></i
+                    ></a>
+
+                    <!-- Card content -->
+                    <div class="card-body p-4">
+                      <!-- Title -->
+                      <h4 class="card-title">Card title</h4>
+                      <hr class="my-2" />
+                      <!-- Text -->
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                    </div>
+
+                    <!-- Card footer -->
+                    <div class="rounded-bottom rgba-blue-grey-slight p-4">
+                      <ul class="list-unstyled">
+                        <li class="price-item">
+                          <a href="#">1,000,000.00 MZN</a>
+                        </li>
+                        <li class="location-item">
+                          <span class="blue-grey-text">Magoanine, Maputo</span>
+                        </li>
+                        <li class="user-item">
+                          <span class="black-text">Giroflex</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- Card -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- / Card Panel -->
+
+        <!-- Card Panel -->
+        <section class="card-panel mb-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title text-main mb-4">
+                <div class="circle d-inline-block mr-2">
+                  <i class="far fa-clock"></i>
+                </div>
+                Panel title
+              </h5>
+              <div class="row">
+                <div class="col-md-6 col-lg-6">
+                  <!-- Horizontal Card -->
+                  <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row no-gutters">
+                      <div
+                        class="col-md-5 d-flex justify-content-center align-items-center"
+                      >
+                        <img
+                          src="https://mdbootstrap.com/img/Photos/Others/food.jpg"
+                          class="card-img"
+                          alt="..."
+                        />
+                      </div>
+                      <div class="col-md-7">
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">
+                            This is a wider card with supporting text below as a
+                            natural lead-in to additional content. This content
+                            is a little bit longer.
+                          </p>
+                        </div>
+
+                        <!-- Button -->
+                        <div class="d-flex justify-content-end">
+                          <a class="btn-floating btn-action orange"
+                            ><i class="far fa-heart"></i
+                          ></a>
+                          <a class="btn-floating btn-action orange"
+                            ><i class="far fa-heart"></i
+                          ></a>
+                        </div>
+                        <hr class="my-0" />
+                        <!-- Card footer -->
+                        <div class="py-2 mt-3 px-4">
+                          <ul class="list-unstyled">
+                            <li class="price-item">
+                              <a href="#">1,000,000.00 MZN</a>
+                            </li>
+                            <li class="location-item">
+                              <span class="blue-grey-text"
+                                >Magoanine, Maputo</span
+                              >
+                            </li>
+                            <li class="user-item">
+                              <span class="black-text">Giroflex</span>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- / Card Panel -->
+      </div>
+    </main>
+    <!-- Sidebar navigation -->
+    <div id="categories" class="side-nav">
+      <ul class="custom-scrollbar">
+        <!-- Side navigation links -->
+        <li>
+          <ul class="collapsible collapsible-accordion">
+            <span class="font-small text-muted" style="padding-left: 20px;"
+              >Categorias</span
+            >
+            <li>
+              <a class="collapsible-header waves-effect arrow-r"
+                ><i class="fas fa-chevron-right"></i> Submit blog<i
+                  class="fas fa-angle-down rotate-icon"
+                ></i
+              ></a>
+              <div class="collapsible-body">
+                <ul>
+                  <li><a href="#" class="waves-effect"><i class="far fa-envelope"></i>Submit listing</a></li>
+                  <li><a href="#" class="waves-effect"><i class="far fa-envelope"></i>Submit listing</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a class="collapsible-header waves-effect arrow-r"
+                ><i class="far fa-hand-pointer"></i> Instruction<i
+                  class="fas fa-angle-down rotate-icon"
+                ></i
+              ></a>
+              <div class="collapsible-body">
+                <ul>
+                  <li><a href="#" class="waves-effect"><i class="far fa-envelope"></i>Submit listing</a></li>
+                  <li><a href="#" class="waves-effect"><i class="far fa-envelope"></i>Submit listing</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a class="collapsible-header waves-effect arrow-r"
+                ><i class="fas fa-eye"></i> About<i
+                  class="fas fa-angle-down rotate-icon"
+                ></i
+              ></a>
+              <div class="collapsible-body">
+                <ul>
+                  <li><a href="#" class="waves-effect">Introduction</a></li>
+                  <li><a href="#" class="waves-effect">Monthly meetings</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a class="collapsible-header waves-effect arrow-r"
+                ><i class="far fa-envelope"></i> Contact me<i
+                  class="fas fa-angle-down rotate-icon"
+                ></i
+              ></a>
+              <div class="collapsible-body">
+                <ul>
+                  <li><a href="#" class="waves-effect">FAQ</a></li>
+                  <li><a href="#" class="waves-effect">Write a message</a></li>
+                </ul>
+              </div>
+            </li>
+            <!-- <li>
+              <div class="row">
+                <div class="col-sm-6 d-flex justify-content-center p-0">
+                  <div class="categorie-card">
+                    <div class="icon d-flex justify-content-center align-items-center"><i class="fas fa-bolt m-0"></i></div>
+                    <span class="text">Telemóveis</span>
+                    <span class="quant">50 artigos</span>
+                  </div>
+                </div>
+              </div>
+            </li> -->
+          </ul>
+        </li>
+        <!--/. Side navigation links -->
+      </ul>
+    </div>
+    <!--/. Sidebar navigation -->
+
+    <!-- Sidebar navigation -->
+    <div id="profile" class="side-nav white">
+      <ul class="custom-scrollbar">
+        <!-- Logo -->
+        <li
+          class="userdata"
+          style="background-image: url(assets/img/bg720.jpg);"
+        >
+          <img
+            class="z-depth-2 m-0"
+            src="assets/userdata/fotos/perfil/avatar_dzqwxxrgar.jpg"
+            alt="assets/userdata/fotos/perfil/avatar.jpg"
+            srcset=""
+          />
+          <h6 class="mt-3 mb-0">Flossy Giroflex</h6>
+          <span class="font-small">emerson@gmail.com</span>
+        </li>
+        <!--/. Logo -->
+        <!-- Side navigation links -->
+        <li>
+          <ul class="collapsible collapsible-accordion mt-0">
+            <span class="font-small text-muted" style="padding-left: 20px;"
+              >Definições</span
+            >
+            <li>
+              <a class="waves-effect text-muted"
+                ><i class="far fa-heart"></i> Desejos</a
+              >
+            </li>
+            <li>
+              <a class="waves-effect text-muted"
+                ><i class="fas fa-list-ul"></i> Meus anúncios</a
+              >
+            </li>
+            <li>
+              <a class="waves-effect text-muted"
+                ><i class="fas fa-info-circle"></i> Dados pessoais</a
+              >
+            </li>
+            <li>
+              <a class="waves-effect text-muted"
+                ><i class="fas fa-sign-out-alt"></i> Sair</a
+              >
+            </li>
+          </ul>
+        </li>
+        <!--/. Side navigation links -->
+      </ul>
+    </div>
+    <!--/. Sidebar navigation -->
+
+    <!--Bottom Bar-->
+    <div
+      class="container-fluid bg-main bottom-bar p-0 fixed-bottom z-depth-3 d-lg-none"
+    >
+      <div class="d-flex justify-content-around align-items-center">
+        <div class="text-center">
+          <a
+            class="btn-floating z-depth-0 mx-0 d-flex align-items-center justify-content-center"
+            ><img src="assets/ai/quick-mini-white-min.png" alt="logo" /><span
+              >home</span
+            ></a
+          >
+        </div>
+        <div class="text-center">
+          <a
+            type="button"
+            data-activates="profile"
+            class="btn-floating z-depth-0 mx-0 active button-collapse"
+            ><i class="fas fa-list-ul"><span>categorias</span></i></a
+          >
+        </div>
+        <div class="text-center">
+          <a type="button" class="btn-floating z-depth-0 mx-0"
+            ><i class="fas fa-plus"><span>Anunciar</span></i></a
+          >
+        </div>
+        <div class="text-center">
+          <a type="button" class="btn-floating  z-depth-0 mx-0"
+            ><i class="far fa-user-circle"><span>Minha Conta</span></i></a
+          >
+        </div>
+        <div class="text-center">
+          <a type="button" class="btn-floating  z-depth-0 mx-0"
+            ><i class="fas fa-sign-in-alt"><span>Entrar</span></i></a
+          >
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer
+      class="page-footer font-small bg-dark-main"
+    >
+      <!-- Copyright -->
+      <div class="container">
+        <div class="py-3 d-flex justify-content-between">
+          <span>Copyright © Todos direitos reservados</span>
+          <span
+            >Criado por:
+            <a href="https://chillstudio.co.mz" class="text-uppercase"
+              >CS Chill Studio MZ</a
+            ></span
+          >
+        </div>
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- Your custom scripts (optional) -->
+    <script type="text/javascript">
+      $(".bottom-bar a.btn-floating").each((i, e) => {
+        e.onclick = function () {
+          $(".bottom-bar a.btn-floating.active").removeClass("active");
+          $(e).addClass("active");
+        };
+      });
+      $(document).ready(function () {
+        // SideNav Button Initialization
+        $(".button-collapse").sideNav({
+          menuWidth: 300, // Width for sidenav
+        });
+        // SideNav Scrollbar Initialization
+        const sideNavScrollbar = document.querySelector(".custom-scrollbar");
+        const ps = new PerfectScrollbar(sideNavScrollbar);
+      });
+      // onclick = function () {
+      //   console.log("yea");
+      //   $(".bottom-bar a.btn-floating").forEach((element) => {
+      //     element.removeClass("active");
+      //   });
+      //   $(this).addClass("active");
+      // };
+    </script>
+  </body>
+</html>

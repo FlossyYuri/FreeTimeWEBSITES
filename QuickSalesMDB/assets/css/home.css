@@ -1,0 +1,151 @@
+main .row{
+  margin-bottom:0;
+}
+/* Formatacao de slides */
+main .slides .navegation-btn{
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  font-size: 5rem;
+  color: white;
+  height: 50%;
+  width: 5rem;
+  background-color: #00000088;
+  cursor:pointer;
+  margin-left: 1rem;
+  margin-right: 1.5rem;
+  transform: translateY(50%);
+  -webkit-transform: translateY(50%);
+  transition: 200ms;
+  -webkit-transition: 200ms;
+  border-radius: 10px;
+}
+
+main .slides .navegation-btn i{
+  margin-left: 1rem;
+}
+
+main .slides .btn-right{
+  right: 0;
+}
+
+main .slides:hover > .navegation-btn{
+  opacity: 1;
+}
+
+
+
+/* Formatacao para painel de cards */
+main .card-panel .panel-title{
+  font-weight: 600;
+}
+
+main .card-panel h5 i{
+  font-size: 1rem;
+}
+main .card-panel .circle{
+  border: 1px solid #7b1fa2;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 10px;
+}
+
+/* Formatacao dos cards */
+main .card-panel .card .btn-floating i{
+  font-size: 2rem;
+}
+
+main .card-panel .card{
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+main .card-panel .card:hover {
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+main .card-content .card-title{
+  color: #7b1fa2;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+main .card-content .card-image{
+    height: 285.5px;
+}
+
+.overflow-hidden{
+  overflow: hidden;
+}
+
+main .card-content .card-image img{
+  object-fit: contain;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Alteracoes opcionais */
+main .vertical-1 .card-content p{
+  height: 45px;
+}
+
+main .card-action{
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+}
+
+main .card-panel .circle{
+  justify-content: center;
+}
+
+/* cor de link do card */
+.card .card-action a{
+  color: #7b1fa2;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.card .card-action a:hover{
+  color: #e65100  !important;
+}
+.card .card-action .btn{
+  color: #fff !important;
+}
+
+.card .card-action .btn:hover{
+  color: #fff  !important;
+}
+@media only screen and (min-width: 600px) {
+  main .card-content .card-image img{
+  max-height: 285.5px;
+}
+
+}
+
+@media only screen and (max-width: 600px) {
+  main .slides .navegation-btn{
+    font-size: 3rem;
+    width: 4rem;
+    
+  }
+  main .slides .navegation-btn i{
+    margin-left: 1rem;
+  }
+  
+  main .card-content .card-image{
+      height: auto;
+  }
+  .painel-dinamico{
+    padding: 5px 0 5px 0 !important;
+  }
+  .col-home{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .panel-title{
+    padding-left: 20px;
+  }
+  
+}

@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Material Design for Bootstrap</title>
+    <!-- MDB icon -->
+    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"
+    />
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- Material Design Bootstrap -->
+    <link rel="stylesheet" href="css/mdb.min.css" />
+    <!-- Your custom styles (optional) -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="assets/css/anunciar.css" />
+  </head>
+
+  <body>
+    <!--Main Navigation-->
+    <header>
+      <div class="container-xl top-bar">
+        <div class="row my-2">
+          <div class="col-md-7">
+            <ul>
+              <li>
+                <img style="height: 35px;" src="assets/ai/quick.png" alt="" />
+              </li>
+              <li>
+                <a class="btn btn-outline-main waves-effect d-flex"
+                  ><i class="fas fa-list-ul"></i> Meus anúncios</a
+                >
+              </li>
+              <li>
+                <a class="btn bg-main d-flex"
+                  ><i class="fas fa-plus left"></i> Anunciar</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-5">
+            <ul class="d-flex justify-content-end">
+              <li>
+                <a class="btn btn-outline-main waves-effect d-flex"
+                  ><i class="far fa-heart"></i> Desejos</a
+                >
+              </li>
+              <li>
+                <a class="btn btn-outline-main waves-effect d-flex"
+                  ><i class="far fa-user-circle"></i> Minha conta</a
+                >
+              </li>
+              <li>
+                <a class="btn btn-outline-main waves-effect d-flex"
+                  ><i class="far fa-user-circle"></i>
+                  Entrar/Registrar
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-main">
+        <div class="container-xl flex-column">
+          <!-- Large outline input -->
+          <div class="col-sm-12 p-0">
+            <!-- Material background input -->
+            <div class="md-form md-bg m-1">
+              <input type="text" id="formBg1" class="form-control" />
+              <label for="formBg1">Pesquisar</label>
+            </div>
+          </div>
+          <div class="col-sm 12 p-0 categorias">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#"
+                    ><i class="fas fa-caret-right"></i> Todas Categorias</a
+                  >
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="#"
+                    ><i class="fa fa-mobile"></i
+                    ><span> Artigos Eletrônicos</span></a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"
+                    ><i class="fas fa-tv"></i><span> Eletrodoméstico</span></a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!--Main Navigation-->
+
+    <!--Main Layout-->
+    <main class="py-2 mt-3">
+      <div class="container-xl">
+        <section class="anunciar">
+          <h2 class="text-main" style="font-weight: 500;">Novo Anuncio</h2>
+          <p>Introduza os dados do produto</p>
+          <form
+            id="anunciar"
+            class="col-sm-12 anunciar"
+            enctype="multipart/form-data"
+            method="post"
+          >
+            <div class="row">
+              <div class="input-field col-sm-12 p-0">
+                <div class="md-form orange-input active-orange-input">
+                  <input
+                    id="titulo_anuncio"
+                    type="text"
+                    name="titulo"
+                    min-length="10"
+                    data-length="100"
+                    class="form-control"
+                  />
+                  <label for="titulo_anuncio">Titulo</label>
+                </div>
+              </div>
+
+              <div class="input-field col-sm-12 col-md-6 pl-0">
+                <select
+                  class="icons mdb-select md-form colorful-select dropdown-danger"
+                  searchable="Escreva a categoria..."
+                  name="categoria"
+                >
+                  <option value="" disabled selected
+                    >Selecione a categoria do produto</option
+                  >
+                  <option value="1">USA</option>
+                  <option value="2">Germany</option>
+                  <option value="3">France</option>
+                  <option value="3">Poland</option>
+                  <option value="3">Japan</option>
+                </select>
+              </div>
+              <div class="input-field col-sm-12 col-md-6 pr-0">
+                <select
+                  class="icons mdb-select md-form colorful-select dropdown-danger"
+                  searchable="Escreva a categoria..."
+                  name="subcategoria"
+                  disabled
+                >
+                  <option value="" disabled selected
+                    >Selecione a subcategoria do produto</option
+                  >
+                  <option value="1">USA</option>
+                  <option value="2">Germany</option>
+                  <option value="3">France</option>
+                  <option value="3">Poland</option>
+                  <option value="3">Japan</option>
+                </select>
+              </div>
+
+              <div class="col-sm-12 tab-perfil">
+                <div class="row">
+                  <div class="input-field col-md-12 col-lg-4 pl-0">
+                    <div class="md-form orange-input active-orange-input">
+                      <input
+                        id="price"
+                        name="preco"
+                        type="number"
+                        min="0"
+                        class="form-control validate"
+                      />
+                      <label for="price">Preco</label>
+                    </div>
+                  </div>
+                  <div
+                    class="col-md-12 col-lg-4 d-flex justify-content-center align-items-center"
+                  >
+                    <div class="form-check">
+                      <input
+                        type="checkbox"
+                        class="form-check-input"
+                        id="negociavel"
+                        name="negociavel"
+                      />
+                      <label class="form-check-label" for="negociavel"
+                        >Negociável</label
+                      >
+                    </div>
+                    <!-- Material unchecked -->
+                    <div class="form-check">
+                      <input
+                        type="radio"
+                        class="form-check-input"
+                        id="troca"
+                        name="venda"
+                      />
+                      <label class="form-check-label" for="troca">Troca</label>
+                    </div>
+
+                    <!-- Material checked -->
+                    <div class="form-check">
+                      <input
+                        type="radio"
+                        class="form-check-input"
+                        id="venda"
+                        value="venda"
+                        name="venda"
+                        checked
+                      />
+                      <label class="form-check-label" for="venda">Venda</label>
+                    </div>
+                  </div>
+                  <div class="input-field col-md-12 col-lg-4 pr-0">
+                    <select
+                      class="mdb-select md-form colorful-select dropdown-danger"
+                    >
+                      <option value="" disabled selected
+                        >Tipo de Anunciante</option
+                      >
+                      <option value="2">Particular</option>
+                      <option value="3">Empresa</option>
+                    </select>
+
+                    <label class="disabled mdb-main-label"
+                      >Tipo de Anunciante</label
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="input-field col-sm-12 p-0">
+                <!--Material textarea-->
+                <div class="md-form mb-4 pink-textarea active-pink-textarea">
+                  <textarea
+                    id="descricao"
+                    name="descricao"
+                    length="5000"
+                    data-length="5000"
+                    class="md-textarea form-control"
+                    rows="3"
+                  ></textarea>
+                  <label for="descricao">Descrição</label>
+                </div>
+              </div>
+
+              <div class="row col-sm-12 uploads">
+                <div
+                  class="col-sm-6 col-md-4 col-lg-3 uploaded1 d-flex justify-content-center"
+                >
+                  <input
+                    class="d-none imagens"
+                    type="file"
+                    id="imagem_1"
+                    name="imagem1"
+                    accept="image/*"
+                  />
+                  <label for="imagem_1"
+                    ><img id="imagem_1-" src="assets/img/add-image.png"
+                  /></label>
+                  <span class="indice">-</span>
+                </div>
+
+                <div
+                  class="col-sm-6 col-md-4 col-lg-3 uploaded2 d-flex justify-content-center"
+                >
+                  <input
+                    class="d-none imagens"
+                    type="file"
+                    id="imagem_2"
+                    name="imagem2"
+                    accept="image/*"
+                  />
+                  <label for="imagem_2"
+                    ><img id="imagem_2-" src="assets/img/add-image.png"
+                  /></label>
+                  <span class="indice">-</span>
+                </div>
+
+                <div
+                  class="col-sm-6 col-md-4 col-lg-3 uploaded3 d-flex justify-content-center"
+                >
+                  <input
+                    class="d-none imagens"
+                    type="file"
+                    id="imagem_3"
+                    name="imagem3"
+                    accept="image/*"
+                  />
+                  <label for="imagem_3"
+                    ><img id="imagem_3-" src="assets/img/add-image.png"
+                  /></label>
+                  <span class="indice">-</span>
+                </div>
+
+                <div
+                  class="col-sm-6 col-md-4 col-lg-3 uploaded4 d-flex justify-content-center"
+                >
+                  <input
+                    class="d-none imagens"
+                    type="file"
+                    id="imagem_4"
+                    name="imagem4"
+                    accept="image/*"
+                  />
+                  <label for="imagem_4"
+                    ><img id="imagem_4-" src="assets/img/add-image.png"
+                  /></label>
+                  <span class="indice">-</span>
+                </div>
+              </div>
+              <div class="col-sm-12 text-center">
+                <button
+                  id="publicar"
+                  type="submit"
+                  class="waves-effect waves-light bg-main white-text btn btn-lg"
+                >
+                  Publicar anuncio
+                </button>
+              </div>
+            </div>
+          </form>
+        </section>
+      </div>
+    </main>
+    <!--Main Layout-->
+
+    <!-- Footer -->
+    <footer class="page-footer font-small bg-dark-main">
+      <!-- Copyright -->
+      <div class="container">
+        <div class="py-3 d-flex justify-content-between">
+          <span>Copyright © Todos direitos reservados</span>
+          <span
+            >Criado por:
+            <a href="https://chillstudio.co.mz" class="text-uppercase"
+              >CS Chill Studio MZ</a
+            ></span
+          >
+        </div>
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- Your custom scripts (optional) -->
+    <script type="text/javascript">
+      // Material Select Initialization
+      $(document).ready(function () {
+        $(".mdb-select").materialSelect();
+      });
+    </script>
+  </body>
+</html>

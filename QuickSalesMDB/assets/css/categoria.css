@@ -1,0 +1,53 @@
+.card-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.svg{
+  width: 40%;
+}
+
+.card-content {
+  position: relative;
+}
+
+.card-content .botoes .btn-floating:nth-child(2) {
+  margin-right: 70px;
+}
+
+.card-action {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-bar i.right {
+  /*margin-left: 4px;*/
+}
+
+.produtos .loader {
+  justify-content: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.produtos .filter-bar .btn{
+  /*padding: 0;*/
+}
+.produtos .filter-bar .btn:hover {
+  color: #e65100;
+}
+
+.max-min{
+  padding-left: 25px;
+  padding-right: 25px;
+}
+  
+.filter-bar a.active{
+  background-color: #F44336 !important;
+  color: white !important;
+}
+
+.filter-bar a.active:hover{
+  background-color: #e65100;
+  color: white !important;
+}

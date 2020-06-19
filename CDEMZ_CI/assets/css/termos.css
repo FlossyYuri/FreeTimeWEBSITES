@@ -1,0 +1,30 @@
+
+
+.side-bar{
+  background-color: #2F2FA122;
+  padding-top: 40px !important;
+  padding-bottom: 40px !important;
+  display: flex;
+  align-items: center;
+}
+
+.content-side div{
+  min-height:70vh;
+}
+
+.side-bar .list-group-item{
+  border: none;
+  background-color: transparent;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #495057aa;
+}
+.side-bar .list-group-item.active{
+  color: #F64C71
+}
+
+@media (max-width: 500px){
+  .politica{
+    margin: 0 15px 40px 10px;
+  }
+}

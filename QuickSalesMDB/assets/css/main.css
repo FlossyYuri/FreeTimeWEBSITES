@@ -1,0 +1,13 @@
+@import url("geral/geral.css");
+@import url("home.css");
+@import url("categoria.css");
+@import url("produto.css");
+@import url("desejos.css");
+@import url("anunciar.css");
+@import url("perfil.css");
+
+.nums{
+    border: 2px solid grey;
+    padding: 10px;
+    border-radius: 5px;
+  }
